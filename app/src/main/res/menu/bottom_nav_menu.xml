@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/homeicon"
+        android:title="Home"
+        android:background="@null" />
+
+    <item
+        android:id="@+id/journal"
+        android:icon="@drawable/journalicon"
+        android:title="Journal"
+        android:background="@null" />
+
+    <item
+        android:id="@+id/session"
+        android:icon="@drawable/sessionicon"
+        android:title="Session"
+        android:background="@null" />
+
+
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/newsicon"
+        android:title="News &amp; Tips"
+        android:background="@null" />
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/communityicon"
+        android:title="Community"
+        android:background="@null" />
+
+</menu>

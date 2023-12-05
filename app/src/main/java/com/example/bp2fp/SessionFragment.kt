@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -15,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [NewsFragment.newInstance] factory method to
+ * Use the [SessionFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class NewsFragment : Fragment() {
+class SessionFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -28,7 +26,6 @@ class NewsFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
         }
     }
 
@@ -37,23 +34,7 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_news, container, false)
-        val rvNews:RecyclerView = view.findViewById(R.id.recyleViewNews)
-        rvNews.layoutManager = LinearLayoutManager(requireContext())
-
-        val data = ArrayList<NewsModel>()
-        data.add(NewsModel(R.drawable.icon1,"Berita 1", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"))
-        data.add(NewsModel(R.drawable.icon1,"Berita 2", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"))
-        data.add(NewsModel(R.drawable.icon1,"Berita 3", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"))
-        data.add(NewsModel(R.drawable.icon1,"Berita 4", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"))
-        data.add(NewsModel(R.drawable.icon1,"Berita 5", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"))
-
-        val adapter = AdapterNews(data)
-
-        rvNews.adapter = adapter
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_session, container, false)
     }
 
     companion object {
@@ -63,18 +44,16 @@ class NewsFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment NewsFragment.
+         * @return A new instance of fragment SessionFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            NewsFragment().apply {
+            SessionFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
     }
-
-
 }

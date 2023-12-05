@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val mainFragment=HomeFragment()
         val journalFragment=JournalFragment()
         val newsFragment=NewsFragment()
+        val sessionFragment=SessionFragment()
 
 
         supportFragmentManager.beginTransaction().apply {
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home->currentFragment(mainFragment)
                 R.id.journal->currentFragment(journalFragment)
                 R.id.news->currentFragment(newsFragment)
+                R.id.session->currentFragment(sessionFragment)
 
             }
             true
